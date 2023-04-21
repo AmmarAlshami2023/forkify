@@ -1,5 +1,5 @@
-import { async } from 'regenerator-runtime';
-import { TIMEOUT_SEC } from './config.js';
+import { async } from "regenerator-runtime";
+import { TIMEOUT_SEC } from "./config.js";
 const timeout = function (s) {
   return new Promise(function (_, reject) {
     setTimeout(function () {
@@ -11,9 +11,9 @@ export const AJAX = async function (url, uploadData = undefined) {
   try {
     const fetchPro = uploadData
       ? fetch(url, {
-          method: 'POST',
+          method: "POST",
           headers: {
-            'Content-Type': 'application/json',
+            "Content-Type": "application/json",
           },
           body: JSON.stringify(uploadData),
         })
@@ -40,9 +40,9 @@ export const getJSON = async function (url) {
 export const sendJSON = async function (url, uploadData) {
   try {
     const fetchPro = fetch(url, {
-      method: 'POST',
+      method: "POST",
       headers: {
-        'Content-Type': 'application/json',
+        "Content-Type": "application/json",
       },
       body: JSON.stringify(uploadData),
     });
